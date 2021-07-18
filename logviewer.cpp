@@ -63,6 +63,7 @@ void LogViewer::readLogFile() {
         // show error if unable to read
         QMessageBox::warning(this, tr("Read Failed"),
                              tr("Reading logs from file has been failed"));
+        return;
     }
 
     // read the logs and parse them to a log map
