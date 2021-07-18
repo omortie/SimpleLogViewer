@@ -45,6 +45,7 @@ void LogViewer::populateModel() {
             LogType logType = static_cast<LogType>(logRow.takeFirst().toInt());
 
             auto logItem = new QStandardItem(LogText);
+            logItem->setEditable(false);
             logItem->setData(logType);
             logItem->setData(determineLogColor(logType),Qt::BackgroundRole);
 
