@@ -58,7 +58,7 @@ void LogViewer::populateModel() {
 
 void LogViewer::readLogFile() {
     // try to open the log file to read from
-    QFile logFile("logs.txt");
+    QFile logFile("../logs.txt");
     if (!logFile.open(QIODevice::ReadOnly)) {
         // show error if unable to read
         QMessageBox::warning(this, tr("Read Failed"),
